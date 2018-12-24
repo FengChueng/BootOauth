@@ -82,7 +82,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
                 // Confidential client where client secret can be kept safe (e.g. server side)
                 .withClient("confidential").secret("secret")
-                .authorizedGrantTypes("client_credentials", "authorization_code", "refresh_token")
+//                .authorizedGrantTypes("client_credentials", "authorization_code", "refresh_token")
+                .authorizedGrantTypes("client_credentials", "password", "refresh_token")
                 .scopes("read", "write").redirectUris("http://localhost:8080/client/")
 
                 .and()
